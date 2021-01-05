@@ -7,6 +7,7 @@
 
 class Objet{
     public:
+    std::string nom;
     private:
 
 };
