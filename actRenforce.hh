@@ -4,15 +4,15 @@
 |                                |
 |   -= Coding Carte Game =-      |
 |                                |
-|         Sport in C++           |
+|    Activity renforcée in C++   |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 Licence: GPL
 
-File: sport.hpp
-	Functions' prototypes for sport
+File: actRenforce.hh
+	Functions' prototypes for the acticity renforcée
 
 2020-2021 Projet C++
 */
@@ -21,17 +21,12 @@ File: sport.hpp
 #pragma once
 #include <iostream>
 //#include "soiree.hpp"
-#include "actRenforce.hpp"
+#include "activity.hh"
 
-class Sport: public ActRenforce{
+class ActRenforce: public Activity{
+	private:
+		std::size_t ptRenforce;
 	public:
-		Sport():ActRenforce(15){
-            nom = "Sport";
-        };
-		std::string estFait(){
-			fait = "1";
-			return fait;
-		}
-		std::string getName(){return nom;};
-        
+		ActRenforce(std::size_t pt):Activity(),ptRenforce(pt){};
+		virtual ~ActRenforce()=default;   
 };

@@ -4,15 +4,15 @@
 |                                |
 |   -= Coding Carte Game =-      |
 |                                |
-|     Activity: Chat in C++      |
+|       Objet: Gant in C++       |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 Licence: GPL
 
-File: chat.hpp
-	Functions' prototypes for the carte "Chat"
+File: gant.hh
+	Functions' prototypes for the carte "Gant"
 
 2020-2021 Projet C++
 */
@@ -20,18 +20,18 @@ File: chat.hpp
 
 #pragma once
 #include <iostream>
-//#include "soiree.hpp"
-#include "actInfection.hpp"
+#include "objet.hh"
 
-class Chat: public ActInfection{
+class Gant: public Objet{
 	public:
-		Chat():ActInfection(15){
-            nom = "Chat";
-        };
-		std::string estFait(){
-			fait = "1";
-			return fait;
+		std::size_t ptProtect=20;
+	protected:
+		Gant():Objet("Gant"){};
+		std::string estUtilise(){
+			porte = "1";
+			return porte;
 		}
 		std::string getName(){return nom;};
         
+		
 };

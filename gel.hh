@@ -4,15 +4,15 @@
 |                                |
 |   -= Coding Carte Game =-      |
 |                                |
-|       Objet: Gant in C++       |
+|        Objet: Gel in C++       |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 Licence: GPL
 
-File: gant.hpp
-	Functions' prototypes for the carte "Gant"
+File: gel.hh
+	Functions' prototypes for the carte "Gel"
 
 2020-2021 Projet C++
 */
@@ -20,14 +20,13 @@ File: gant.hpp
 
 #pragma once
 #include <iostream>
-#include "gant.hpp"
-#include "objet.hpp"
+#include "objet.hh"
 
-class Gant: public Objet{
+class Gel: public Objet{
 	public:
-		std::size_t ptProtect=20;
+		std::size_t ptProtect=2;
 	protected:
-		Gant():Objet("Gant"){};
+		Gel():Objet("Gel"){};
 		std::string estUtilise(){
 			porte = "1";
 			return porte;

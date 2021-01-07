@@ -4,15 +4,15 @@
 |                                |
 |   -= Coding Carte Game =-      |
 |                                |
-|     Objet: Masque in C++       |
+|     Activity: Chat in C++      |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 Licence: GPL
 
-File: masque.hpp
-	Functions' prototypes for the carte "Masque"
+File: chat.hh
+	Functions' prototypes for the carte "Chat"
 
 2020-2021 Projet C++
 */
@@ -20,17 +20,18 @@ File: masque.hpp
 
 #pragma once
 #include <iostream>
-#include "masque.hpp"
-#include "objet.hpp"
+//#include "soiree.hpp"
+#include "actInfection.hh"
 
-class Masque: public Objet{
+class Chat: public ActInfection{
 	public:
-		std::size_t ptProtect=10;
-	protected:
-		Masque():Objet("Masque"){};
-		std::string estUtilise(){
-			porte = "1";
-			return porte;
+		Chat():ActInfection(15){
+            nom = "Chat";
+        };
+		std::string estFait(){
+			fait = "1";
+			return fait;
 		}
 		std::string getName(){return nom;};
+        
 };

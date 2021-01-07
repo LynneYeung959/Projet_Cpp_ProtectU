@@ -4,15 +4,15 @@
 |                                |
 |   -= Coding Carte Game =-      |
 |                                |
-|     Activity: Soiree in C++    |
+|   Alimentation Protéine in C++ |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 Licence: GPL
 
-File: soiree.hpp
-	Functions' prototypes for the carte "Soirée"
+File: alimProteine.hh
+	Functions' prototypes for alimProteine
 
 2020-2021 Projet C++
 */
@@ -21,13 +21,12 @@ File: soiree.hpp
 #pragma once
 #include <iostream>
 //#include "soiree.hpp"
-#include "actInfection.hpp"
+#include "actRenforce.hh"
 
-
-class Soiree: public ActInfection{
+class AlimProteine: public ActRenforce{
 	public:
-		Soiree():ActInfection(30){
-            nom = "Soiree";
+		AlimProteine():ActRenforce(15){
+            nom = "Prend Alim Proteine";
         };
 		std::string estFait(){
 			fait = "1";

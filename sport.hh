@@ -4,15 +4,15 @@
 |                                |
 |   -= Coding Carte Game =-      |
 |                                |
-|        Objet: Gel in C++       |
+|         Sport in C++           |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 Licence: GPL
 
-File: gel.hpp
-	Functions' prototypes for the carte "Gel"
+File: sport.hh
+	Functions' prototypes for sport
 
 2020-2021 Projet C++
 */
@@ -20,19 +20,17 @@ File: gel.hpp
 
 #pragma once
 #include <iostream>
-#include "gel.hpp"
-#include "objet.hpp"
+#include "actRenforce.hh"
 
-class Gel: public Objet{
+class Sport: public ActRenforce{
 	public:
-		std::size_t ptProtect=2;
-	protected:
-		Gel():Objet("Gel"){};
-		std::string estUtilise(){
-			porte = "1";
-			return porte;
+		Sport():ActRenforce(15){
+            nom = "Sport";
+        };
+		std::string estFait(){
+			fait = "1";
+			return fait;
 		}
 		std::string getName(){return nom;};
         
-		
 };

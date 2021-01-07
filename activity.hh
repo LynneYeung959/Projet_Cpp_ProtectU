@@ -11,7 +11,7 @@
 Authors: YANG Liyun, JIN Qianhui
 Licence: GPL
 
-File: activity.hpp
+File: activity.hh
 	Functions' prototypes for the activity
 
 2020-2021 Projet C++

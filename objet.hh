@@ -11,7 +11,7 @@
 Authors: YANG Liyun, JIN Qianhui
 Licence: GPL
 
-File: objet.hpp
+File: objet.hh
 	Functions' prototypes for the carte "objet"
 
 2020-2021 Projet C++

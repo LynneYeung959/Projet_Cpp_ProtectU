@@ -4,15 +4,15 @@
 |                                |
 |   -= Coding Carte Game =-      |
 |                                |
-|    Activity infection in C++   |
+|     Objet: Masque in C++       |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 Licence: GPL
 
-File: actInfection.hpp
-	Functions' prototypes for the acticity infection
+File: masque.hh
+	Functions' prototypes for the carte "Masque"
 
 2020-2021 Projet C++
 */
@@ -20,13 +20,16 @@ File: actInfection.hpp
 
 #pragma once
 #include <iostream>
-//#include "soiree.hpp"
-#include "activity.hpp"
+#include "objet.hh"
 
-class ActInfection: public Activity{
-	private:
-		std::size_t ptInfection;
+class Masque: public Objet{
 	public:
-		ActInfection(std::size_t pt):Activity(),ptInfection(pt){};
-		virtual ~ActInfection()=default;   
+		std::size_t ptProtect=10;
+	protected:
+		Masque():Objet("Masque"){};
+		std::string estUtilise(){
+			porte = "1";
+			return porte;
+		}
+		std::string getName(){return nom;};
 };

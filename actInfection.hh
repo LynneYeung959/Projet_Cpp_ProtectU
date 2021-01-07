@@ -4,15 +4,15 @@
 |                                |
 |   -= Coding Carte Game =-      |
 |                                |
-|    Activity renforcée in C++   |
+|    Activity infection in C++   |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 Licence: GPL
 
-File: actRenforce.hpp
-	Functions' prototypes for the acticity renforcée
+File: actInfection.hh
+	Functions' prototypes for the acticity infection
 
 2020-2021 Projet C++
 */
@@ -20,13 +20,12 @@ File: actRenforce.hpp
 
 #pragma once
 #include <iostream>
-//#include "soiree.hpp"
-#include "activity.hpp"
+#include "activity.hh"
 
-class ActRenforce: public Activity{
+class ActInfection: public Activity{
 	private:
-		std::size_t ptRenforce;
+		std::size_t ptInfection;
 	public:
-		ActRenforce(std::size_t pt):Activity(),ptRenforce(pt){};
-		virtual ~ActRenforce()=default;   
+		ActInfection(std::size_t pt):Activity(),ptInfection(pt){};
+		virtual ~ActInfection()=default;   
 };
