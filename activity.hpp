@@ -4,15 +4,15 @@
 |                                |
 |   -= Coding Carte Game =-      |
 |                                |
-|       objet API in C++         |
+|       Activity in C++         |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 Licence: GPL
 
-File: objet.hpp
-	Functions' prototypes for the carte "objet"
+File: activity.hpp
+	Functions' prototypes for the activity
 
 2020-2021 Projet C++
 */
@@ -20,13 +20,13 @@ File: objet.hpp
 #pragma once
 #include <iostream>
 
-class Objet{
+class Activity{
     public:
         std::string nom;
-        std::string porte;
+        std::string fait;
     protected:
-        Objet(std::string name):nom(name),porte("0"){};
-        //virtual ~Objet()=default;
-        virtual std::string estUtilise() = 0;
-        virtual std::string getName() = 0;
+        Activity():fait("0"){};
+        virtual ~Activity()=default;
+        virtual std::string estFait() = 0;
+        virtual std::string getNom() = 0;
 };
