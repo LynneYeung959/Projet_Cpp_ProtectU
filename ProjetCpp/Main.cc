@@ -39,7 +39,7 @@ list<Personnage> create(){
 };
 */
 typedef pair<string,int> ROLE;
-typedef question<int, string> QUESTION;
+typedef pair<int, string> QUESTION;
 
 vector<ROLE> listRole(){
 	vector<ROLE> role;
@@ -63,9 +63,14 @@ vector<ROLE> listRole(){
 	}
 	return role;
 };
-
+/*
+	Fonction du début de jeu, elle affiche la liste des personnages à choisir
+	void start(vector<ROLE> r)
+		- vector<ROLE> r : la liste des personnages à choisir
+							cette liste a été enovyé par la fonction vector<ROLE> listRole()
+*/
 void start(vector<ROLE> r){
-	cout << "\n\t--------WELCOME TO XXXXX--------\n\n";
+	cout << "\n\t--------GAME START--------\n\n";
     cout << "Saisir le caractére préféré dans la liste suivante : \n\n";
     cout << "--------------------------------------\n";
     cout <<"\tMetier    Point de l'immunité"  << "\n"<< endl;
@@ -76,7 +81,14 @@ void start(vector<ROLE> r){
     cout<< "---------------------------------------\nJoueur :"<<endl;
 
 };
+/*
+	Fonction renvoye le point de l'immunité de personnage choisi par joueur
 
+	int parametreRole(string choix, vector<ROLE> lRole)
+		- string choix: le nom de la personnage choisi du joueur,
+		- vecotr<ROLE> lRole: la liste de personnages à choisir
+			ce paramètre a été récupéré dans la fonction : vector<ROLE> listRole()
+*/
 int parametreRole(string choix, vector<ROLE> lRole)
 {
 	for(auto it=lRole.begin(); it!=lRole.end(); ++it)
@@ -88,39 +100,74 @@ int parametreRole(string choix, vector<ROLE> lRole)
 	}
 	return 0;
 }
+/*
+	Fonction à créer la personnage choisi par joueur
 
-Personnage roleCreer(string choix, int parametreRole)
+	Personnage roleCreer(string choix, int pointImmu)
+		- strng choix: le nom de la personnage choisi par joueur
+		- int pointImmu: le point de l'immunité de la personnage choisi
+*/
+Personnage* roleCreer(string choix, int pointImmu)
 {
-	return Personnage(choix,parametreRole);
+	return new Personnage(choix,pointImmu);
 };
-
+/*
 vector<QUESTION> qDocteur()
 {
 	ifstream file("docteur.txt");
-	vector<Question > quesDoctor;
+	vector<QUESTION > quesDoctor;
+}
+*/
+/*vector<QUESTION> */void qDocteur()
+{
+	ifstream file("docteur.txt");
+	vector<QUESTION> quesDoctor;
+	string line;
+	while(getline(file,line))
+	{
+		cout<< "BRAVO" << endl;
+	}
 
 }
 
 int main()
-{
+{	
+
+	// Creer un HITOIRE pour afficher les l'ordre de joueur
+	// map? or vector?
+	//string nameJoueur;
 	vector<ROLE> r = listRole();
 	start(r);
-	int go = 0;
+	string reponse; //le choix du personnage de joueur
+	Personnage *perso;
+	//int go = 0; //indiquer si le rôle est bien créé
 	while(1)
 	{
-	    string reponse;
+	    
 	    cin >> reponse;
-	    if (parametreRole(reponse,r)==0)
+	    if(!cin)	//eviter l'erreur si la réponse n'est pas du type string
+	    {
+	    	cin.clear();
+	    	cin.sync();
 	    	cout << "\tSYSTEME: Je ne connais pas votre choix. Veuillez entrer à nouveau \nJoueur :"<<endl;
-	    else {
-	    	Personnage perso=roleCreer(reponse,parametreRole(reponse,r));
-	    	cout << "\tSYSTEME: Rôle est bien créé !\n" <<endl;
-	    	go = 1;
+	    	continue;
 	    }
-	    if (go ==1){
-	    	cout << "______"<<endl;
+	    if (parametreRole(reponse,r)==0)
+	    {	cout << "\tSYSTEME: Je ne connais pas votre choix. Veuillez entrer à nouveau \nJoueur :"<<endl;
+	    	continue;	
 	    }
+	    perso=roleCreer(reponse,parametreRole(reponse,r));
+	    cout << "\tSYSTEME: Rôle est bien créé !\n" <<endl;
+	    break;
 	}
+
+	 if(reponse == "Docteur")
+	    	{
+	    		qDocteur();
+	    	/*else if(reponse == "Vieillard")*/
+	    }
+	perso->toString();
+	
 };
 
 

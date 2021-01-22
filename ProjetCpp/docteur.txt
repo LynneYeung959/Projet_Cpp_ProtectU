@@ -1,2 +1,10 @@
-1 C'est 8 heur du matin, Vous allez au travail. Quels objets voulez vous porter? 
-2 
+Q1 C'est 8 heur du matin, Vous allez au travail. Quels objets voulez vous porter? (Saisir 1 ou 2 ou 3 séparer avec l'espace)
+1 Aliments
+2 Gant
+3 Portable
+4 Masque
+
+Q2 Vous être arrivé au bureau, vous vous occupez bien tôt un patient. Vous allez faire?
+1 Prenez le gel
+2 Aucune chose
+3 Lavez les mains   

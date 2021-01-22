@@ -33,44 +33,48 @@ class Personnage
         // Constructeur par défaut
         Personnage();
         // Constructeur overload
-        Personnage(std::string nom);
         Personnage(std::string nom, int ptImmu);
         // Deconstructeur
-        //~Personnage(); 
+        virtual ~Personnage()
+        {
+            if(!tabObjet) delete tabObjet;
+        }; 
 
         // Opérateur overload
         Personnage operator()(std::string nom, int ptImmu);
         Personnage& operator=(const Personnage& perso);
         //Personnage& operator==(const Personnage& perso);
 
-        // Fonction
-        int getPtImmunite();
-        int setPtImmunite(int n);
-        char contamine();
+        // Fonction à récupérer les informations de personnage
+        std::string getName(){return name;};
+        char getEtat(){return etat;};
+        int getPtImmunite(){return ptImmunite;};
+        int getProtect(){return ptProtect;};
+        std::vector<std::string>* getObjet(){return tabObjet;};
         void toString();
+
+        // Fonction à changer les propriétés de personnage
+        void setPtImmunite(int n){ptImmunite = n;};
+        void contamine(){etat = '+';};
+        void getObjet(Objet *ob);
+        //void doSth(Activity *act);
         
     private:
-        std::string name;
-        char etat;
-        int ptImmunite;
-        int ptProtect=0;
-        std::vector<std::string> tabObjet;
+        std::string name;   //nom de Personnage
+        char etat;          //etat de personnage, soit positive soit negative
+        int ptImmunite;     //point de l'immunité
+        int ptProtect;    //point de protection
+        std::vector<std::string> *tabObjet;
 };
 
-Personnage::Personnage(std::string nom):name(nom){};
 
-//Personnage::Personnage(char e):etat(e){};
-
-Personnage::Personnage(std::string nom, int ptImmu):name(nom),etat('-'),ptImmunite(ptImmu){};
-
-/*
-Personnage::Personnage(std::string name,char etat,int immunite)
-{
-    name = name;
-    etat = etat;
-    immunite = immunite;
-}
-*/
+Personnage::Personnage(std::string nom, int ptImmu){
+    name = nom;
+    etat = '-';
+    ptImmunite = ptImmu;
+    ptProtect = 0;
+    tabObjet = new Objet();
+};
 
 /*
     les operateurs overload
@@ -79,8 +83,9 @@ Personnage::Personnage(std::string name,char etat,int immunite)
 Personnage Personnage::operator()(std::string nom,int ptImmu)
 {
     name = nom;
-    ptImmunite = ptImmu;
     etat = '-';
+    ptImmunite = ptImmu;
+    ptProtect = 0;
     return *this;
 };
 
@@ -94,26 +99,21 @@ Personnage& Personnage::operator=(const Personnage& perso)
     return *this;
 };
 
-
-
 /*
-    Les fonctions de la classe personnage
+    Afficher les fonctions de la classe personnage
 
 */
-int Personnage::getPtImmunite(){
-    return ptImmunite;
-};
-
-int Personnage::setPtImmunite(int n){
-    ptImmunite = n;
-    return ptImmunite;
-};
-
-char Personnage::contamine(){
-    etat = 'P';
-    return etat;
-};
-
 void Personnage::toString(){
-    std::cout<< "Role est :" << this->name << " Point de l'immunité est : " << this->ptImmunite << std::endl;
+    std::cout<< "Role est : " << name << std::endl;
+    std::cout<< "Son état : " << etat << std::endl;
+    std::cout<< "Point de l'immunité : " << ptImmunite << std::endl;
+    std::cout<< "Point de protection : " << ptProtect << std::endl;
+    // à améliorer pour montrer le tableau de objet et leurs pt de protection
+    std::cout<< "Objet : " << tabObjet<< std::endl;
 }
+
+void Personnage::getObjet(Objet *ob)
+{
+    ptProtect += ob->getPtProteger();
+    tabObjet.push_back(ob);
+};

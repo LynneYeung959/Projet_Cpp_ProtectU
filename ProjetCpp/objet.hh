@@ -20,14 +20,22 @@ File: objet.hh
 #include <iostream>
 
 class Objet{
-    public:
-        std::string nom;
-        std::string porte;
     protected:
-        Objet();
-        Objet(std::string name):nom(name),porte("0"){};
+        std::string nom;
+        std::string rank;   //niveau de protection
+        int ptProteger;     //pt de protection
+    public:
+        Objet(std::string namem="",std::string niveau="", int ptP = 0){
+            nom = name;
+            rank = niveau;
+            ptProteger = ptP;
+        };
         ~Objet()=default;
-        bool estPorte();
-        std::string estUtilise();
-        std::string getName();
+
+        /*
+            Fonction à récupérer les informations de l'objet
+        */
+        std::string getName(){return nom;};
+        std::string getRank(){return rank;};
+        int getPtProteger(){return ptProteger;};
 };
