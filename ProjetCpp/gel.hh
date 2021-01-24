@@ -18,24 +18,17 @@ File: objet.hh
 
 #pragma once
 #include <iostream>
+#include "objet.hh"
 
-class Objet{
-    protected:
-        std::string nom;
-        std::string rank;   //niveau de protection
-        int ptProteger;     //pt de protection
+class Gel:public Objet{
     public:
-        Objet(std::string name,std::string niveau, int ptP){
-            nom = name;
-            rank = niveau;
-            ptProteger = ptP;
-        };
+        Gel(std::string name = "Gel",std::string niveau = "1", int ptP = 10):Objet(name,niveau,ptP){};
         virtual ~Objet()=default;
 
         /*
             Fonction à récupérer les informations de l'objet
-        */
+        
         std::string getName(){return nom;};
         std::string getRank(){return rank;};
-        int getPtProteger(){return ptProteger;};
+        int getPtProteger(){return ptProteger;};*/
 };
