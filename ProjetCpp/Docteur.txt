@@ -1,0 +1,23 @@
+Q1 C'est 8 heur du matin, Vous allez au travail. Quels objets voulez vous porter? 
+1 Gel
+2 Gant
+3 Portable
+4 Masque
+
+Q2 Vous être arrivé au bureau, vous vous occupez bien tôt un patient. Vous allez faire?
+1 Mettre le gel
+2 Prendre un café
+3 Laver les mains avec le savon
+4 Ranger le bureau
+
+Q3 Vous avez fini la consultation, le patient est parti. Vous attandez le patient suivant, pendant ce temps, vous allez faire?
+1 Appler le patient suivant
+2 Nettoyer les matériels
+3 Laver les mains avec le savon
+4 Ranger les dossiers
+
+Q4 Vous avez fini du travail, votre amie vous demande de boire un coup, ainsi votre collegue vous invite d'aller à sa fête d'anniversaire. Vous décidez de ......?
+1 Allez au bar avec votre amie
+2 Allez à la fête d'anniversaire de collegue
+3 Réfusez les deux, rentrez chez vous
+4 Vous refusez votre collegue, invitez votre amie d'aller chez vous
