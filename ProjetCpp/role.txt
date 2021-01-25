@@ -1,5 +1,0 @@
-Docteur 80
-Vieillard 45
-Etudiant 60
-Employe 65
-Enfant 40
