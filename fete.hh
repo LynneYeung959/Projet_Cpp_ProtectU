@@ -4,27 +4,27 @@
 |                                |
 |  -= Coding Screenplay Game =-  |
 |                                |
-|       Masque API in C++        |
+|          Fete in C++           |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 
-File: masque.hh
-	Functions' prototypes for the carte "masque"
+File: fete.hh
+	Functions' prototypes for the activity: fete
 
 2020-2021 Projet C++
 */
 
 #pragma once
 #include <iostream>
-#include "objet.hh"
+#include "moinsProtect.hh"
 
-class Masque:public Objet{
+class Fete: public MoinsProtect{
     public:
-        Masque(){
-            nom = "Masque";
-            _plusProtect = 20;
+        Fete(){
+            nom = "Fête";
+            _moinsProtect = 45;
         };
-        ~Masque(){};
+        ~Fete(){};
 };

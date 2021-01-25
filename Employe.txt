@@ -1,0 +1,23 @@
+Q1 Il est 7h30 du matin, vous allez travailler. Que voulez vous apporter?
+1 Alimants
+2 Gant
+3 Portable
+4 Masque
+
+Q2 Quel type de transport voulez-vous prendre pour aller à l'endroit du travail?
+1 Bus
+2 Métro
+3 Taxi
+4 Vélo
+
+Q3 C'est l'heure de déjeuner, choisissez-vous?
+1 Manger dans un restaurant
+2 Emporter et manger dans le parc
+3 Manger chez vous
+4 Manger rien
+
+Q4 Que choisissez-vous de faire après le travail?
+1 Aller au bar pour prendre un verre avec vos amis
+2 Faire du sport dans le jardin
+3 Participer une soirée
+4 Rentrer chez vous

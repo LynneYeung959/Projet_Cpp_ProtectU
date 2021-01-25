@@ -2,14 +2,13 @@
 
 * ------------------------------ *
 |                                |
-|   -= Coding Carte Game =-      |
+|  -= Coding Screenplay Game =-  |
 |                                |
 |       objet API in C++         |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
-Licence: GPL
 
 File: objet.hh
 	Functions' prototypes for the carte "objet"
@@ -19,14 +18,28 @@ File: objet.hh
 
 #pragma once
 #include <iostream>
+#include "choix.hh"
 
-class Objet{
-    public:
-        std::string nom;
-        std::string porte;
+class Objet:public Choix{
     protected:
-        Objet(std::string name):nom(name),porte("0"){};
-        //virtual ~Objet()=default;
-        virtual std::string estUtilise() = 0;
-        virtual std::string getName() = 0;
+        int _plusProtect;
+    public:
+        Objet(){
+            nom = "Objet";
+            _plusProtect = 0;
+        }
+        virtual ~Objet()
+        {
+           // std::cout <<"Destruction Objet"<<std::endl;
+        };
+
+        /*
+            Fonction à récupérer les informations de l'objet
+        */
+        int getPlusProteger(){return _plusProtect;};
+        int getPlusImmu(){return 0;};
+        int getMoinsProtect(){return 0;}; 
+        void show(){
+            std::cout << "C'est un objet < "<< nom<<" >, son point de protection est "<<_plusProtect<<std::endl;
+        }
 };

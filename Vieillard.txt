@@ -1,0 +1,23 @@
+Q1 Il est 7 heures du matin, vous venez de réveillez. Que voulez vous faire?
+1 Prendre une douche
+2 Prendre le repas
+3 Promener
+4 Nettroyer la chambre
+
+Q2 Avant le repas, que voulez-vous faire?
+1 Prendre le gel
+2 Aucune chose
+3 Laver les mains 
+4 Désinfecter les assiettes
+
+Q3 Vous voulez sortir pour faire des course, quel type de transport voulez-vous prendre?
+1 Bus
+2 Metro
+3 Pieds
+4 Taxi
+
+Q4 Un jour est passé, que voulez-vous faire avant de dormir?
+1 Laver les mains
+2 Prendre un bain
+3 Prendre le gel
+4 Rien

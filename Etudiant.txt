@@ -1,0 +1,23 @@
+Q1 Il est 7 heures du matin, vous allez à l'école. Que voulez vous apporter?
+1 Alimants
+2 Gel
+3 Portable
+4 Masque
+
+Q2 Quel type de transport voulez-vous prendre pour aller à l'endroit du travail?
+1 Bus
+2 Métro
+3 Taxi
+4 Vélo
+
+Q3 Pendant la récréation, que voulez-vous faire?
+1 Manger quelques petites douceurs
+2 Rester dans la classe
+3 Aller au toilette
+4 Fumer
+
+Q4 Que choisissez-vous de faire après le cours?
+1 Aller au bar pour prendre un verre avec vos amis
+2 Faire le sport dans le jardin
+3 Faire des courses
+4 Rentrez chez vous et finir les devoirs

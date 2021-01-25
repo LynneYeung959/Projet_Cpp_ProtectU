@@ -2,36 +2,29 @@
 
 * ------------------------------ *
 |                                |
-|   -= Coding Carte Game =-      |
+|  -= Coding Screenplay Game =-  |
 |                                |
-|       Objet: Gant in C++       |
+|         Gant API in C++        |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
-Licence: GPL
 
 File: gant.hh
-	Functions' prototypes for the carte "Gant"
+	Functions' prototypes for the "gant"
 
 2020-2021 Projet C++
 */
-
 
 #pragma once
 #include <iostream>
 #include "objet.hh"
 
-class Gant: public Objet{
-	public:
-		std::size_t ptProtect=20;
-	protected:
-		Gant():Objet("Gant"){};
-		std::string estUtilise(){
-			porte = "1";
-			return porte;
-		}
-		std::string getName(){return nom;};
-        
-		
+class Gant:public Objet{
+    public:
+        Gant(){
+            nom = "Gant";
+            _plusProtect = 15;
+        };
+        ~Gant(){};
 };

@@ -1,0 +1,23 @@
+Q1 Il est 9 heures du matin, vous allez prendre le petit-déjeuner, que voulez-vous faire avant le repas?
+1 Mettre le gel
+2 Prendre un jus
+3 Laver les mains avec le savon
+4 Rien
+
+Q2 Vous allez sortir avec vos amis, que voulez-vous apporter?
+1 Gel
+2 Gant
+3 Alimants
+4 Masque
+
+Q3 Que voulez-vous faire avec vos amis?
+1 Jouer le football
+2 Nager
+3 Jouer avec le sable
+4 Promener
+
+Q4 Vous venez de rentrer, quelle est votre première activité?
+1 Laver les mains
+2 Prendre un bain
+3 Prendre le gel
+4 Rien

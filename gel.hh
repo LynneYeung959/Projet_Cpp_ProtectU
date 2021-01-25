@@ -2,36 +2,29 @@
 
 * ------------------------------ *
 |                                |
-|   -= Coding Carte Game =-      |
+|  -= Coding Screenplay Game =-  |
 |                                |
-|        Objet: Gel in C++       |
+|         Gel API in C++         |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
-Licence: GPL
 
 File: gel.hh
-	Functions' prototypes for the carte "Gel"
+	Functions' prototypes for the carte "gel"
 
 2020-2021 Projet C++
 */
-
 
 #pragma once
 #include <iostream>
 #include "objet.hh"
 
-class Gel: public Objet{
-	public:
-		std::size_t ptProtect=2;
-	protected:
-		Gel():Objet("Gel"){};
-		std::string estUtilise(){
-			porte = "1";
-			return porte;
-		}
-		std::string getName(){return nom;};
-        
-		
+class Gel:public Objet{
+    public:
+        Gel(){
+            nom = "Gel";
+            _plusProtect = 10;
+        };
+        ~Gel(){};
 };

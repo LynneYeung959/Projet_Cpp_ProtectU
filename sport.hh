@@ -2,35 +2,29 @@
 
 * ------------------------------ *
 |                                |
-|   -= Coding Carte Game =-      |
+|  -= Coding Screenplay Game =-  |
 |                                |
 |         Sport in C++           |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
-Licence: GPL
 
 File: sport.hh
 	Functions' prototypes for sport
-
 2020-2021 Projet C++
 */
 
 
 #pragma once
 #include <iostream>
-#include "actRenforce.hh"
+#include "plusImmu.hh"
 
-class Sport: public ActRenforce{
+class Sport: public PlusImmu{
 	public:
-		Sport():ActRenforce(15){
+		Sport(){
             nom = "Sport";
+            _plusImmu = 15;
         };
-		std::string estFait(){
-			fait = "1";
-			return fait;
-		}
-		std::string getName(){return nom;};
-        
+        ~Sport(){};
 };

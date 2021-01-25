@@ -4,27 +4,27 @@
 |                                |
 |  -= Coding Screenplay Game =-  |
 |                                |
-|       Masque API in C++        |
+|          Fumer in C++          |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 
-File: masque.hh
-	Functions' prototypes for the carte "masque"
+File: fumer.hh
+	Functions' prototypes for the "fumer"
 
 2020-2021 Projet C++
 */
 
 #pragma once
 #include <iostream>
-#include "objet.hh"
+#include "moinsProtect.hh"
 
-class Masque:public Objet{
+class Fumer: public MoinsProtect{
     public:
-        Masque(){
-            nom = "Masque";
-            _plusProtect = 20;
+        Fumer(){
+            nom = "Fumer";
+            _moinsProtect = 20;
         };
-        ~Masque(){};
+        ~Fumer(){};
 };

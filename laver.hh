@@ -4,27 +4,27 @@
 |                                |
 |  -= Coding Screenplay Game =-  |
 |                                |
-|       Masque API in C++        |
+|        Laver API in C++        |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 
-File: masque.hh
-	Functions' prototypes for the carte "masque"
+File: laver.hh
+	Functions' prototypes for the "laver"
 
 2020-2021 Projet C++
 */
 
 #pragma once
 #include <iostream>
-#include "objet.hh"
+#include "plusProtect.hh"
 
-class Masque:public Objet{
+class Laver: public PlusProtect{
     public:
-        Masque(){
-            nom = "Masque";
-            _plusProtect = 20;
+        Laver(){
+        	nom = "Laver";
+        	_plusProtect = 5;
         };
-        ~Masque(){};
+        ~Laver(){};
 };

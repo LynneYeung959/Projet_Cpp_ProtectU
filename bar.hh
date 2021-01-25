@@ -4,27 +4,26 @@
 |                                |
 |  -= Coding Screenplay Game =-  |
 |                                |
-|       Masque API in C++        |
+|           Bar in C++           |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 
-File: masque.hh
-	Functions' prototypes for the carte "masque"
+File: bar.hh
+	Functions' prototypes for the activity: go to the bar
 
 2020-2021 Projet C++
 */
 
 #pragma once
 #include <iostream>
-#include "objet.hh"
+#include "moinsProtect.hh"
 
-class Masque:public Objet{
+class Bar: public MoinsProtect{
     public:
-        Masque(){
-            nom = "Masque";
-            _plusProtect = 20;
+        Bar(){
+            nom = "Bar";
+            _moinsProtect = 50;
         };
-        ~Masque(){};
 };

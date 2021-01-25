@@ -1,0 +1,23 @@
+Q1 Il est 8 heures du matin, vous allez au travail. Que voulez-vous apporter? 
+1 Gel
+2 Gant
+3 Portable
+4 Masque
+
+Q2 Vous êtes arrivé au bureau, vous vous occupez bientôt d'un patient. Que souhaitez-vous faire?
+1 Mettre le gel
+2 Prendre un café
+3 Laver les mains avec le savon
+4 Ranger le bureau
+
+Q3 Vous avez fini la consultation, le patient est parti. Vous attendez le patient suivant, pendant ce temps, que souhaitez-vous faire?
+1 Appeler le patient suivant
+2 Nettoyer les matériels
+3 Laver les mains avec le savon
+4 Ranger les dossiers
+
+Q4 Vous avez fini de travailler, votre amie vous demande de boire un coup, en même temps votre collègue vous invite à sa fête d'anniversaire. Vous décidez de ......?
+1 Aller au bar avec votre amie
+2 Aller à la fête d'anniversaire de collègue
+3 Refuser les deux, rentrez chez vous
+4 Refuser votre collègue et inviter votre amie d'aller chez vous

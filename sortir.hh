@@ -4,27 +4,27 @@
 |                                |
 |  -= Coding Screenplay Game =-  |
 |                                |
-|       Masque API in C++        |
+|         Sortir in C++          |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 
-File: masque.hh
-	Functions' prototypes for the carte "masque"
+File: sortir.hh
+	Functions' prototypes for the "Sortir"
 
 2020-2021 Projet C++
 */
 
 #pragma once
 #include <iostream>
-#include "objet.hh"
+#include "moinsProtect.hh"
 
-class Masque:public Objet{
+class Sortir: public MoinsProtect{
     public:
-        Masque(){
-            nom = "Masque";
-            _plusProtect = 20;
+        Sortir(){
+            nom = "Sortir";
+            _moinsProtect = 10;
         };
-        ~Masque(){};
+        ~Objet(){};
 };

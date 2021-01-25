@@ -4,27 +4,27 @@
 |                                |
 |  -= Coding Screenplay Game =-  |
 |                                |
-|       Masque API in C++        |
+|       Transport in C++         |
 |                                |
 * ------------------------------ *
 
 Authors: YANG Liyun, JIN Qianhui
 
-File: masque.hh
-	Functions' prototypes for the carte "masque"
+File: transport.hh
+	Functions' prototypes for the "Transport"
 
 2020-2021 Projet C++
 */
 
 #pragma once
 #include <iostream>
-#include "objet.hh"
+#include "moinsProtect.hh"
 
-class Masque:public Objet{
+class Transport: public MoinsProtect{
     public:
-        Masque(){
-            nom = "Masque";
-            _plusProtect = 20;
+        Transport(){
+            nom = "Transport";
+            _moinsProtect = 30;
         };
-        ~Masque(){};
+        ~Transport(){};
 };
